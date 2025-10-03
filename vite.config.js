@@ -6,10 +6,21 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 3000,
+    historyApiFallback: true,
     host: true,
   },
   build: {
-    outDir: 'dist'
+    outDir: 'dist',
+    // IMPORTANTE per Vercel
+    assetsDir: 'assets',
+    rollupOptions: {
+      output: {
+        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash].[ext]'
+      }
+    }
   },
-  base: '/',
+  // BASE CRITICA per Vercel
+  base: '/'
 })

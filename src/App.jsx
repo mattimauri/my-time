@@ -36,7 +36,7 @@ function App() {
                 </ProtectedRoute>
               }
             />
-            <Route path="*" element={<Navigate to="/" replace />} />
+            <Route path="*" element={<Home />} />
           </Routes>
         </div>
       </BrowserRouter>
