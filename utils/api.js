@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = 'https://z098--secure-api--9467bf7t4qkk.code.run/api';
+const BASE_URL = 'https://p01--peirano-api--9467bf7t4qkk.code.run/api';
 // const BASE_URL = 'http://localhost:3001/api';
 
 // Istanza Axios
